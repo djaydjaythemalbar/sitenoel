@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisi ton personnage</title>
+    <style>
+	     font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		
+		h1{
+		font-size: 24px; /* définissez la taille du texte souhaitée */
+		}
+
+        img {
+            max-width: 200px; /* définissez la largeur maximale souhaitée */
+            height: auto; /* permet de conserver les proportions originales de l'image */
+			margin-bottom: 10px; /* espace entre les images */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Choisi ton personnage</h1>
+
+        <label>
+            <input type="radio" name="character" value="Thierry Alcinous">
+            <img src="assets/images/thierry.png" alt="Character 1">
+        </label>
+
+        <label>
+            <input type="radio" name="character" value="Marie, Hélène">
+            <img src="assets/images/helene.jpg" alt="Character 2">
+        </label>
+
+        <label>
+            <input type="radio" name="character" value="Garincha Fatigué">
+            <img src="assets/images/sasha.jpg" alt="Character 3">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Garincha à Lunettes">
+            <img src="assets/images/sashalunette.png" alt="Character 4">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Garincha Marié">
+            <img src="assets/images/sashamarie.jpg" alt="Character 10">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Dylan Gabriel">
+            <img src="assets/images/dylan.jpg" alt="Character 5">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Loic Jean Fontaine">
+            <img src="assets/images/loic.jpg" alt="Character 6">
+        </label>
+		
+	    <label>
+            <input type="radio" name="character" value="Sandjay Alcinous">
+            <img src="assets/images/sandjay.png" alt="Character 7">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Lili The Cat">
+            <img src="assets/images/lili.png" alt="Character 8">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Snoop Dog">
+            <img src="assets/images/snoopdog.jpg" alt="Character 9">
+        </label>
+		
+		<label>
+            <input type="radio" name="character" value="Taouah The Dog">
+            <img src="assets/images/taouah.png" alt="Character 9">
+        </label>
+
+        <p><h1>Personnage choisi : <span id="selectedCharacter">None</span></h1></p>
+		
+		<a href="questionnairenoel.html" target="_blank">
+        <button>Questionnaire de Noël</button>
+    </a>
+    </div>
+
+    <script>
+        var characterRadios = document.querySelectorAll('input[name="character"]');
+        var selectedCharacterSpan = document.getElementById('selectedCharacter');
+
+        characterRadios.forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                selectedCharacterSpan.textContent = this.value;
+            });
+        });
+    </script>
+
+</body>
+</html>
